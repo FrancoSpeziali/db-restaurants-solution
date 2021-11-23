@@ -13,6 +13,8 @@ In this assignment you will be expected to write an API for connecting to a rest
 For this assignment you will have to:
 
 1. Load a sample dataset
+2. Create a schema for the dataset collection `restaurants`
+3. Create an API which is divided between 2 routes - `search` and `update`
 
 This project assumes you've already had experience with:
 
@@ -119,17 +121,17 @@ We will create an endpoint to load specific restaurant data, based on the restau
    
 > Hint: You can use the method `findById()`
 
-## Task 8 - Endpoint to search for restaurants by title
+## Task 8 - Endpoint to search for restaurants by name
 
-We will create an endpoint to search for restaurant data
+We will create an endpoint to search for restaurant data, by name
 
-1. Create an endpoint `/title` in your `search` router. This will be a `GET` endpoint
-    - The endpoint should expect a **parameter**, the restaurant `title` to search by
+1. Create an endpoint `/name` in your `search` router. This will be a `GET` endpoint
+    - The endpoint should expect a **parameter**, the restaurant `name` to search by
     - The endpoint should expect a **query parameter**, the number of results to limit to search to
 
 > Hint: You can access parameters from the **request** object with the `params` property
 
-2. Use your `Restaurant` model to find the restaurant by searching in the `title` field. It should:
+2. Use your `Restaurant` model to find the restaurant by searching in the `name` field. It should:
     - Limit the results using the `limit()` method. If no value is supplied, default to `10`
     - Use the `lean()` method to remove all inherited Model methods
     - If found, return a status of `200` and the resulting restaurants
