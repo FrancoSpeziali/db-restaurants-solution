@@ -1,12 +1,6 @@
 # Restaurants 🧆
 
-In this assignment you will be expected to write an API for connecting to a restaurant database
-
-> Difficulty level: Advanced beginner 🧙 🍵
-
-## Keywords
-
-`request parameters`, `query parameters`, `schemas`, `sample_restaurants`, `mongoose validation`, `routes`, `endpoints`, `patch`, `array of subdocuments`, `nested paths`, `lean`, `limit`, `findByIdAndUpdate`, `findByIdAndDelete`
+In this assignment you will be expected to write an API for connecting to a restaurant database. You will be working with some basic mongoose querying methods.
 
 ## What you will be doing
 
@@ -16,24 +10,11 @@ For this assignment you will have to:
 2. Create a schema for the dataset collection `restaurants`
 3. Create an API which is divided between 2 routes - `search` and `update`
 
-This project assumes you've already had experience with:
-
-- Express.js
-- dotenv
-- Setting up routes / endpoints
-- Mongoose / MongoDB
-- Schema subdocuments
-
 ## Tasks
 
 Before starting these tasks, run the command `npm install` or `npm i`
 
-This will automatically install the following packages:
-- express
-- mongoose
-- dotenv
-
-## Task 1 - Loading the sample data
+### Task 1 - Loading the sample data
 
 Before we can begin, we will load a sample dataset to work with.
 
@@ -57,7 +38,7 @@ After this, you should have some new databases / collections:
 
 We will be using the `sample_restaurants` database.
 
-## Task 2 - Setting up the .env file
+### Task 2 - Setting up the .env file
 
 1. Using the `.env.example` file as a template, create a `.env` file
 2. Add your database connection details to your `.env` file
@@ -65,7 +46,7 @@ We will be using the `sample_restaurants` database.
 4. For the other keys, fill in the details as provided to you by your MongoDB service.
 5. The key `DB_HOST` is the domain of the MongoDB service you will connect to
 
-## Task 3 - Connecting your server to your database
+### Task 3 - Connecting your server to your database
 
 1. Using the `mongoose.connect()` method, setup the connection to your server inside `server.js`
 2. `mongoose.connect()` returns a promise
@@ -78,7 +59,7 @@ We will be using the `sample_restaurants` database.
 
 > `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority`
 
-## Task 4 - Preparing our server to receive requests
+### Task 4 - Preparing our server to receive requests
 
 In the next tasks, we will create a REST API so that clients can connect and perform actions on our server. To do this, we must first begin with a few steps:
 
@@ -89,7 +70,7 @@ In the next tasks, we will create a REST API so that clients can connect and per
 
 3. Run `express.json()` as middleware. This will allow any JSON sent for example, with a POST request, to be correctly read by the server.
 
-## Task 5 - Restaurants Schema & Model
+### Task 5 - Restaurants Schema & Model
 
 Unfortunately the sample datasets do not come with Models or Schemas, so we must build our own to interact with these databases / collections
 
@@ -102,11 +83,11 @@ Unfortunately the sample datasets do not come with Models or Schemas, so we must
 
 > Hint: For some data you may need to use subdocuments, or an array of subdocuments
 
-## Task 6 - Creating a search route
+### Task 6 - Creating a search route
 
 1. Create a `search` router which will handle all requests to the path `/search`
 
-## Task 7 - Endpoint to search for restaurants by id
+### Task 7 - Endpoint to search for restaurants by id
 
 We will create an endpoint to load specific restaurant data, based on the restaurant `id`
 
@@ -121,7 +102,7 @@ We will create an endpoint to load specific restaurant data, based on the restau
    
 > Hint: You can use the method `findById()`
 
-## Task 8 - Endpoint to search for restaurants by name
+### Task 8 - Endpoint to search for restaurants by name
 
 We will create an endpoint to search for restaurant data, by name
 
@@ -139,11 +120,11 @@ We will create an endpoint to search for restaurant data, by name
 
 > Hint: Here you must use the `find()` method
 
-## Task 9 - Creating an update route
+### Task 9 - Creating an update route
 
 1. Create an `update` router which will handle all requests to the path `/update`
 
-## Task 10 - Endpoint to search and update the restaurant name restaurant by id
+### Task 10 - Endpoint to search and update the restaurant name restaurant by id
 
 We will create an endpoint to update the **name** of the restaurant, based on the restaurant `id`
 
@@ -164,7 +145,7 @@ We will create an endpoint to update the **name** of the restaurant, based on th
 
 > Hint: You can use the method `findByIdAndUpdate()`
 
-## Task 11 - Endpoint to search and update the restaurant cuisine by id
+### Task 11 - Endpoint to search and update the restaurant cuisine by id
 
 We will create an endpoint to update the **cuisine** of the restaurant, based on the restaurant `id`
 
@@ -185,7 +166,7 @@ We will create an endpoint to update the **cuisine** of the restaurant, based on
 
 > Hint: You can use the method `findByIdAndUpdate()`
 
-## Task 12 - Endpoint to search and update the restaurant location by id
+### Task 12 - Endpoint to search and update the restaurant location by id
 
 We will create an endpoint to update the **address** and **borough** of the restaurant, based on the restaurant `id`
 
@@ -207,7 +188,7 @@ We will create an endpoint to update the **address** and **borough** of the rest
 
 > Hint: You can use the method `findByIdAndUpdate()`
 
-## Task 13 - Endpoint to search and update the restaurant grades by id
+### Task 13 - Endpoint to search and update the restaurant grades by id
 
 We will create an endpoint to update the **grades** of the restaurant, based on the restaurant `id`
 
@@ -228,7 +209,7 @@ We will create an endpoint to update the **grades** of the restaurant, based on 
 
 > Hint: You can use the method `findByIdAndUpdate()`
 
-## Task 14 - Endpoint to search and delete restaurants by id
+### Task 14 - Endpoint to search and delete restaurants by id
 
 We will create an endpoint to search for and delete a restaurant based on the restaurant `id`
 
