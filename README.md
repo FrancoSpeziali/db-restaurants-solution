@@ -41,23 +41,20 @@ We will be using the `sample_restaurants` database.
 ### Task 2 - Setting up the .env file
 
 1. Using the `.env.example` file as a template, create a `.env` file
-2. Add your database connection details to your `.env` file
-3. The key `DB_NAME` points to the name of the database you want to connect to. Use the name `sample_restaurants`. This will ensure that Mongoose will try and use the existing sample dataset you previously set up
-4. For the other keys, fill in the details as provided to you by your MongoDB service.
-5. The key `DB_HOST` is the domain of the MongoDB service you will connect to
+
+2. Add your database connection details to your `.env` file, filling in the details as provided to you by MongoDB
+   > Hint: The key `DB_NAME` points to the name of the database you want to connect to. Use the name `sample_restaurants`. This will ensure that Mongoose will try and use the existing sample dataset you previously set up
+
+   > Hint: The key `DB_HOST` is the **domain** of your MongoDB connection string
 
 ### Task 3 - Connecting your server to your database
 
 1. Using the `mongoose.connect()` method, setup the connection to your server inside `server.js`
+   > Hint: The connection string has already been prepared for you as the variable `dbConnectionString`
 2. `mongoose.connect()` returns a promise
    - use the `then()` method to display a message saying the connection was successful
    - use the `catch()` method to display a message saying the connection failed
 3. Check that your database can connect
-
-> Here is an example of you how might setup your connection string,
-> once you have destructured the properties from `process.env`
-
-> `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority`
 
 ### Task 4 - Preparing our server to receive requests
 
